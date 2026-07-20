@@ -15,7 +15,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome Free Icons CDN -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -1116,8 +1116,68 @@
             </div>
         </div>
     </footer>
-    <script src="/main.js" type="module"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.lucide) window.lucide.createIcons();
+  emailjs.init("b9INusQn0Vy3YeXGg");
+
+  var contactForm = document.getElementById("contact-form");
+  var sendBtn = document.getElementById("send-btn");
+  var successCard = document.getElementById("success-card");
+  var successText = document.getElementById("success-text");
+  var defaultBtnHtml = sendBtn ? sendBtn.innerHTML : '';
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      sendBtn.disabled = true;
+      sendBtn.innerHTML = '<svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4"></path></svg> Sending...';
+      var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+      };
+      emailjs.send("service_g38h8a9", "template_f2kfds8", params)
+        .then(function () {
+          successText.innerHTML = '<strong>' + params.name + '</strong>, your message has been sent successfully! \ud83c\udf89';
+          successCard.classList.remove("hidden");
+          contactForm.reset();
+          sendBtn.disabled = false;
+          sendBtn.innerHTML = defaultBtnHtml;
+          setTimeout(function () { successCard.classList.add("hidden"); }, 4000);
+        })
+        .catch(function (error) {
+          alert("Failed to send message.\n\n" + (error && error.text ? error.text : ''));
+          sendBtn.disabled = false;
+          sendBtn.innerHTML = defaultBtnHtml;
+        });
+    });
+  }
+
+  var menuToggle = document.getElementById("menu-toggle");
+  var mobileMenu = document.getElementById("mobile-menu");
+  if (menuToggle && mobileMenu) menuToggle.addEventListener("click", function () { mobileMenu.classList.toggle("hidden"); });
+
+  var workBtn = document.getElementById("workBtn");
+  if (workBtn) workBtn.addEventListener("click", function () { var el=document.getElementById("projects"); if(el) el.scrollIntoView({behavior:"smooth"}); });
+  var contactBtn = document.getElementById("contactBtn");
+  if (contactBtn) contactBtn.addEventListener("click", function () { var el=document.getElementById("contact"); if(el) el.scrollIntoView({behavior:"smooth"}); });
+  var scrollAbout = document.getElementById("scroll-about");
+  if (scrollAbout) scrollAbout.addEventListener("click", function () { var el=document.getElementById("about"); if(el) el.scrollIntoView({behavior:"smooth"}); });
+
+  document.querySelectorAll('.github-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var url = btn.getAttribute('data-url');
+      if (url) window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  });
+});
+</script>
+
 </body>
 
 </html>
