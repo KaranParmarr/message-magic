@@ -91,6 +91,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      { src: "https://cdn.tailwindcss.com" },
+      { src: "https://unpkg.com/lucide@latest" },
     ],
   }),
   shellComponent: RootShell,
