@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan Parmar — Software Engineer & Data Analyst</title>
+    <meta name="description"
+        content="Portfolio of Karan Parmar — Software Engineer & Data Analyst building REST APIs, full-stack web apps, and data analytics tools.">
+    <meta property="og:title" content="Karan Parmar — Software Engineer & Data Analyst">
+    <meta property="og:description"
+        content="Building backend systems, REST APIs, and data-driven tools. Turning raw data and rough ideas into working software.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Free Icons CDN -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-link.active {
+            color: #2563eb;
+            /* blue-600 */
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="relative min-h-screen text-slate-900 bg-[#f4f7fb] overflow-x-hidden">
+
+    <!-- Global background blobs -->
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute -top-32 -left-40 w-[560px] h-[560px] rounded-full bg-blue-200/40 blur-3xl"></div>
+        <div class="absolute top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-pink-200/40 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 w-[500px] h-[500px] rounded-full bg-purple-200/30 blur-3xl"></div>
+    </div>
+
+    <!-- Nav -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent">
+
+        <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-5">
+
+            <div class="flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="#home"
+                    class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+                    KP
+                </a>
+
+                <!-- Desktop Menu -->
+                <div id="desktop-menu" class="hidden lg:flex items-center gap-10 text-black">
+
+                    <a href="#home" class="hover:text-blue-400 transition">Home</a>
+
+                    <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+
+                    <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+
+                    <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+
+                    <a href="#education" class="hover:text-blue-400 transition">Education</a>
+
+                    <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button id="menu-toggle" class="lg:hidden text-white transition duration-300" aria-label="Toggle Menu">
+
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-xl">
+
+            <a href="#home" class="block px-6 py-4 border-b hover:bg-gray-100">
+                Home
+            </a>
+
+            <a href="#experience" class="block px-6 py-4 border-b hover:bg-gray-100">
+                Experience
+            </a>
+
+            <a href="#skills" class="block px-6 py-4 border-b hover:bg-gray-100">
+                Skills
+            </a>
+
+            <a href="#projects" class="block px-6 py-4 border-b hover:bg-gray-100">
+                Projects
+            </a>
+
+            <a href="#education" class="block px-6 py-4 border-b hover:bg-gray-100">
+                Education
+            </a>
+
+            <a href="#contact" class="block px-6 py-4 hover:bg-gray-100">
+                Contact
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 shadow-lg">
+
+        <a href="#home" class="block px-6 py-4 hover:bg-slate-100">Home</a>
+
+        <a href="#experience" class="block px-6 py-4 hover:bg-slate-100">Experience</a>
+
+        <a href="#skills" class="block px-6 py-4 hover:bg-slate-100">Skills</a>
+
+        <a href="#projects" class="block px-6 py-4 hover:bg-slate-100">Projects</a>
+
+        <a href="#education" class="block px-6 py-4 hover:bg-slate-100">Education</a>
+
+        <a href="#contact" class="block px-6 py-4 hover:bg-slate-100">Contact</a>
+
+    </div>
+
+    </header>
+
+    <!-- Push page below fixed navbar -->
+    <main class="pt-20">
+
+        <!-- Hero -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+            <div class="absolute inset-0  overflow-hidden">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl"
+                    style="transform: translateX(22.933px) translateY(13.7598px) scale(1.09173);">
+                </div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-red-400/20 rounded-full blur-3xl"
+                    style="transform: translateX(-0.841657px) translateY(-0.504994px) scale(1.00505);">
+                </div>
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div style="opacity: 1; transform: none;">
+                        <p class="text-blue-600 font-semibold text-lg mb-4" style="opacity: 1;">Hello, I'm</p>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent"
+                            style="opacity: 1; transform: none;">Karan Parmar</h1>
+                        <h2 class="text-2xl md:text-4xl font-semibold text-slate-700 mb-6"
+                            style="opacity: 1; transform: none;">Software Engineer &amp; Data Analyst</h2>
+                        <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto"
+                            style="opacity: 1; transform: none;">Driven to build innovative digital products using
+                            full-stack development and data analytics. Focused on architecting scalable, elegant systems
+                            from the ground up.</p>
+                        <div class="flex justify-center gap-4 mb-8" style="opacity: 1; transform: none;">
+                            <a href="https://github.com/karanparmarr" target="_blank" rel="noopener noreferrer"
+                                class="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border border-slate-200"
+                                aria-label="GitHub" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-github w-6 h-6 text-slate-700">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg></a><a href="https://www.linkedin.com/in/parmarr-karann/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border border-slate-200"
+                                aria-label="LinkedIn" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-linkedin w-6 h-6 text-slate-700">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect width="4" height="12" x="2" y="9"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg></a><a href="#contact" target="_self"
+                                class="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow border border-slate-200"
+                                aria-label="Email" tabindex="0" style="transform: none;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-mail w-6 h-6 text-slate-700">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg></a>
+                        </div>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+                            <button id="workBtn"
+                                class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 text-lg rounded-md shadow-lg hover:shadow-xl transition-all">
+                                View My Work
+                            </button>
+
+                            <button id="contactBtn"
+                                class="inline-flex items-center justify-center border-2 border-slate-700 text-slate-700 hover:bg-slate-700 hover:text-white px-8 py-6 text-lg rounded-md transition-all">
+                                Get In Touch
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="scroll-about" type="button" aria-label="Scroll down to the About section"
+                class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 cursor-pointer animate-bounce">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                    <path d="m6 9 6 6 6-6"></path>
+
+                </svg>
+
+            </button>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto" style="opacity: 1; transform: none;">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+                        About Me</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mb-12 rounded-full"></div>
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                        <div style="opacity: 1; transform: none;"><img
+                                class="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                                alt="Professional portrait of Rohan Darji" src="/img/portfolio-img.png">
+                        </div>
+                        <div class="space-y-4" style="opacity: 1; transform: none;">
+                            <p class="text-lg text-slate-600 leading-relaxed">I'm a passionate Software Engineer with
+                                hands-on
+                                experience in designing scalable backend systems and deploying production-grade machine
+                                learning models. With a strong foundation in artificial intelligence, data analyst, and
+                                full-stack development, I love solving complex problems and shipping clean, reliable
+                                solutions.</p>
+                            <p class="text-lg text-slate-700 leading-relaxed">My career in technology has cultivated a
+                                versatile skill set that spans full-stack web development and complex data analytics. I
+                                am
+                                deeply committed to professional growth, consistently mastering emerging tools and
+                                adapting
+                                to evolving industry standards.</p>
+                            <p class="text-lg text-slate-700 leading-relaxed">Beyond writing code, I actively explore
+                                emerging frameworks, contribute to open-source initiatives, and give back by sharing
+                                insights with the broader developer community.</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-blue-100"
+                            style="opacity: 1; transform: none;">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-code w-6 h-6 text-white">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 mb-2">Full-Stack Development</h3>
+                            <p class="text-slate-600">Building robust web applications with modern technologies and best
+                                practices.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-blue-100"
+                            style="opacity: 1; transform: none;">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-database w-6 h-6 text-white">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                                    <path d="M3 12A9 3 0 0 0 21 12"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 mb-2">Data Engineering</h3>
+                            <p class="text-slate-600">Designing scalable data pipelines and efficient database
+                                architectures.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-blue-100"
+                            style="opacity: 1; transform: none;">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trending-up w-6 h-6 text-white">
+                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                                    <polyline points="16 7 22 7 22 13"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 mb-2">Data Analysis</h3>
+                            <p class="text-slate-600">Extracting insights from data using statistical analysis and
+                                visualization.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-blue-100"
+                            style="opacity: 1; transform: none;">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-brain w-6 h-6 text-white">
+                                    <path
+                                        d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z">
+                                    </path>
+                                    <path
+                                        d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z">
+                                    </path>
+                                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
+                                    <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+                                    <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                                    <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                                    <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+                                    <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                                    <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 mb-2">AI &amp; Machine Learning</h3>
+                            <p class="text-slate-600">Building intelligent systems using machine learning, deep
+                                learning,
+                                and predictive models to automate decisions and uncover advanced data insights.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-blue-100"
+                            style="opacity: 1; transform: none;">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-cloud w-6 h-6 text-white">
+                                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 mb-2">Cloud &amp; DevOps</h3>
+                            <p class="text-slate-600">Deploying, monitoring, and automating applications using cloud
+                                platforms, CI/CD pipelines, containers, and infrastructure best practices.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-blue-100"
+                            style="opacity: 1; transform: none;">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-graduation-cap w-6 h-6 text-white">
+                                    <path
+                                        d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                                    </path>
+                                    <path d="M22 10v6"></path>
+                                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 mb-2">Continuous Learning &amp; Emerging
+                                Tech
+                            </h3>
+                            <p class="text-slate-600">Actively exploring new technologies, frameworks, and industry
+                                trends
+                                to continuously improve skills and deliver future-ready solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto" style="opacity: 1; transform: none;">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+                        Professional Experience</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mb-12 rounded-full">
+
+                    </div>
+                    <div class="space-y-12">
+                        <div class="relative pl-8 md:pl-0" style="opacity: 1; transform: none;">
+                            <div
+                                class="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-slate-200 transform -translate-x-1/2">
+                            </div>
+                            <div class="md:flex items-start justify-between gap-8 flex-row-reverse">
+                                <div
+                                    class="md:w-[45%] mb-8 md:mb-0 bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                    <div class="flex flex-col gap-1 mb-4">
+                                        <h3 class="text-xl font-bold text-slate-800">Web Developer</h3>
+                                        <h4 class="text-lg font-semibold text-blue-600">Laxmi International Pvt. LTD
+                                        </h4>
+                                        <div class="flex flex-wrap gap-4 text-sm text-slate-500 mt-2">
+                                            <span class="flex items-center gap-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-calendar">
+                                                    <path d="M8 2v4"></path>
+                                                    <path d="M16 2v4"></path>
+                                                    <rect width="18" height="18" x="3" y="4" rx="2">
+                                                    </rect>
+                                                    <path d="M3 10h18"></path>
+                                                </svg>Oct 2025 – Dec 2025</span>
+                                            <span class="flex items-center gap-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-map-pin">
+                                                    <path
+                                                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                                    </path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>Remote</span>
+                                        </div>
+                                    </div>
+                                    <ul
+                                        class="list-disc list-outside ml-5 space-y-2 text-slate-600 text-sm leading-relaxed">
+                                        <li>Developed and maintained responsive web pages using HTML, CSS, JavaScript,
+                                            and
+                                            React.js, improving overall page usability and load speed.</li>
+                                        <li></li>Built and integrated RESTful APIs to connect frontend components with
+                                        backend services, ensuring smooth and reliable data flow.</li>
+                                        <li>Collaborated with design and content teams to implement UI/UX updates and
+                                            resolve bugs, improving site stability.</li>
+                                        <li>Optimized website performance and cross-browser compatibility, enhancing
+                                            user
+                                            experience across devices.</li>
+                                        <li>Used Git for version control and participated in code reviews to maintain
+                                            clean,
+                                            maintainable code.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-red-600 flex items-center justify-center shadow-lg z-10">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-briefcase text-white">
+                                        <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                        <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                                    </svg>
+                                </div>
+                                <div class="hidden md:block md:w-[45%]">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div style="opacity: 1; transform: none;">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+                        Technical Skills</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mb-12 rounded-full"></div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-all"
+                            style="opacity: 1; transform: none;">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100">Programming
+                                Languages</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">JavaScript</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">C++</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Java</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-all"
+                            style="opacity: 1; transform: none;">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100">Databases
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">MySQL</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">PL/SQL</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">MongoDB</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-all"
+                            style="opacity: 1; transform: none;">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100">Data Tools
+                                &amp; Visualization</h3>
+                            <div class="flex flex-wrap gap-2"><span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Pandas</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">NumPy</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Matplotlib</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Seaborn</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Tableau</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Power
+                                    BI</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Pyspark</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-all"
+                            style="opacity: 1; transform: none;">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100">Frameworks
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">React</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Django</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">REST</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">WordPress</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Material-UI</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Bootstrap</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Tailwind
+                                    CSS</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-all"
+                            style="opacity: 1; transform: none;">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100">Dev Tools
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Git</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Gitlab</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Jupyter</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Google
+                                    Colab</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">VS
+                                    Code</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Docker</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Kubernetes</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">AWS</span><span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">PyCharm</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Postman</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-100 hover:shadow-xl transition-all"
+                            style="opacity: 1; transform: none;">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-100">Other
+                                Skills
+                            </h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Windows</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Linux/Unix</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Shell
+                                    Scripting</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Excel</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Google
+                                    Sheets</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div style="opacity: 1; transform: none;">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+                        Projects</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mb-12 rounded-full"></div>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-blue-100 flex flex-col"
+                            style="opacity: 1; transform: none;">
+                            <div class="relative overflow-hidden h-56 bg-white">
+                                <img alt="Power BI Dashboard Finance Report" src="/img/Transport.png">
+                                <div
+                                    class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md backdrop-blur-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-car w-6 h-6 text-blue-600">
+                                        <path
+                                            d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2">
+                                        </path>
+                                        <circle cx="7" cy="17" r="2"></circle>
+                                        <path d="M9 17h6"></path>
+                                        <circle cx="17" cy="17" r="2"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-3">Gujarat Transportation App</h3>
+                                <p class="text-slate-600 mb-6 leading-relaxed flex-1 text-sm">Full-stack transportation
+                                    web
+                                    app for Gujarat built with Flask and SQL, enabling multi-parameter route and
+                                    schedule queries. Structured RESTful routes maintain sub-300ms response times,
+                                    deployed
+                                    end-to-end to production.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Flask</span>
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">MonogoDB</span>
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">RESTful
+                                        APIs</span>
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">MySQL</span>
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Excel</span>
+                                </div>
+                                <div class="flex gap-3 mt-auto">
+                                    <button
+                                        class="text-sm font-medium github-btn ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 flex-1 flex items-center justify-center gap-2"
+                                        data-url="https://github.com/karanparmarr">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                                            <path
+                                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                            </path>
+                                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                        </svg>Code</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-blue-100 flex flex-col"
+                            style="opacity: 1; transform: none;">
+                            <div class="relative overflow-hidden h-56 bg-white"><img alt="Trendsaura Ecommerce Website"
+                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=srgb&fm=jpg&w=1200&q=80">
+                                <div
+                                    class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md backdrop-blur-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-shopping-cart w-6 h-6 text-blue-600">
+                                        <circle cx="8" cy="21" r="1"></circle>
+                                        <circle cx="19" cy="21" r="1"></circle>
+                                        <path
+                                            d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-3">Product Manager App</h3>
+                                <p class="text-slate-600 mb-6 leading-relaxed flex-1 text-sm">Product management
+                                    application
+                                    to track product lifecycle, tasks, and team collaboration. Backend APIs and
+                                    dashboards
+                                    for real-time project progress, with a MySQL schema supporting multi-user task
+                                    ownership
+                                    and status tracking.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Python</span>
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">SQL</span>
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Rest
+                                        API</span>
+                                </div>
+                                <div class="flex gap-3 mt-auto">
+                                    <button
+                                        class="text-sm font-medium github-btn ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 flex-1 flex items-center justify-center gap-2"
+                                        data-url="https://github.com/karanparmarr">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                                            <path
+                                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                            </path>
+                                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                        </svg>Code</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-blue-100 flex flex-col"
+                            style="opacity: 1; transform: none;">
+                            <div class="relative overflow-hidden h-56 bg-white"><img alt="RideShare Carpooling Platform"
+                                    src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+                                <div
+                                    class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md backdrop-blur-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-trending-up w-6 h-6 text-blue-600">
+                                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                                        <polyline points="16 7 22 7 22 13"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-3">Data Visualization Dashboard</h3>
+                                <p class="text-slate-600 mb-6 leading-relaxed flex-1 text-sm">Interactive data
+                                    visualization
+                                    dashboards built with Python's Bokeh library, featuring filtering and drill-down.
+                                    Data
+                                    cleaned and analyzed with Pandas, using reusable chart components to speed up new
+                                    dashboard views.</p>
+                                <div class="flex flex-wrap gap-2 mb-6"><span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Pandas</span><span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Numpy</span><span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Python</span><span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Bokeh</span>
+                                </div>
+                                <div class="flex gap-3 mt-auto">
+                                    <button
+                                        class="text-sm font-medium github-btn ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 flex-1 flex items-center justify-center gap-2"
+                                        data-url="https://github.com/karanparmarr">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                                            <path
+                                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                            </path>
+                                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                        </svg>Code</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-red-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-blue-100 flex flex-col"
+                            style="opacity: 1; transform: none;">
+                            <div class="relative overflow-hidden h-56 bg-white"><img
+                                    alt="Restaurant Review Sentiment Analysis"
+                                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9">
+                                <div
+                                    class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md backdrop-blur-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-message-square w-6 h-6 text-blue-600">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-3">Python Speech-Assistant</h3>
+                                <p class="text-slate-600 mb-6 leading-relaxed flex-1 text-sm">Python-based voice
+                                    assistant
+                                    that executes commands for web search, opening applications, and answering queries.
+                                    Integrates speech recognition and TTS with a modular command-routing structure for
+                                    easy
+                                    expansion.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">Python</span>
+                                    <span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">SpeechRecognition</span><span
+                                        class="px-3 py-1 bg-white text-slate-700 rounded-full text-xs font-semibold border border-slate-200 shadow-sm">pyttsx3</span>
+                                </div>
+                                <div class="flex gap-3 mt-auto">
+                                    <button
+                                        class="text-sm font-medium github-btn ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 flex-1 flex items-center justify-center gap-2"
+                                        data-url="https://github.com/karanparmarr">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                                            <path
+                                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                            </path>
+                                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                        </svg>Code</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+                    <div style="opacity: 1; transform: none;">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="p-3 bg-blue-100 rounded-lg text-blue-600"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-graduation-cap">
+                                    <path
+                                        d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                                    </path>
+                                    <path d="M22 10v6"></path>
+                                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                                </svg></div>
+                            <h2 class="text-3xl font-bold text-slate-800">Education</h2>
+                        </div>
+                        <div class="space-y-8">
+                            <div
+                                class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600 hover:shadow-lg transition-all">
+                                <h3 class="text-xl font-bold text-slate-800">University of Mumbai</h3>
+                                <p class="text-lg text-blue-600 font-medium mb-2">Bachelor's of Science in Information
+                                    Technology</p>
+                                <div class="flex justify-between text-slate-500 text-sm"><span>2023 -
+                                        2026</span><span>Mumbai, India</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="opacity: 1; transform: none;">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="p-3 bg-red-100 rounded-lg text-red-600"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-languages">
+                                    <path d="m5 8 6 6"></path>
+                                    <path d="m4 14 6-6 2-3"></path>
+                                    <path d="M2 5h12"></path>
+                                    <path d="M7 2h1"></path>
+                                    <path d="m22 22-5-10-5 10"></path>
+                                    <path d="M14 18h6"></path>
+                                </svg></div>
+                            <h2 class="text-3xl font-bold text-slate-800">Languages</h2>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                                <div class="flex justify-between items-end mb-2">
+                                    <h3 class="text-xl font-bold text-slate-800">English</h3><span
+                                        class="text-slate-600 font-medium">Fluent (C1)</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                                    <div class="h-2.5 rounded-full bg-gradient-to-r from-blue-600 to-red-600"
+                                        style="width: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+            <div class="container mx-auto px-4">
+                <div style="opacity: 1; transform: none;">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+                        Get In Touch</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mb-12 rounded-full"></div>
+                    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+                        <div class="space-y-8" style="opacity: 1; transform: none;">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-slate-800 mb-6">Contact Information</h3>
+                                <div class="space-y-6"><a href="mailto:official.karanparmar@gmail.com"
+                                        class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all group border border-slate-200"
+                                        style="opacity: 1; transform: none;">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-mail w-6 h-6 text-white">
+                                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-slate-500 font-medium">Email</p>
+                                            <p class="text-slate-700 font-semibold">official.karanparmar@gmail.com</p>
+                                        </div>
+                                    </a><a href="tel:+918976645502"
+                                        class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all group border border-slate-200"
+                                        style="opacity: 1; transform: none;">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-phone w-6 h-6 text-white">
+                                                <path
+                                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-slate-500 font-medium">Phone</p>
+                                            <p class="text-slate-700 font-semibold">+91 8976645502</p>
+                                        </div>
+                                    </a><a href="#"
+                                        class="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all group border border-slate-200"
+                                        style="opacity: 1; transform: none;">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-map-pin w-6 h-6 text-white">
+                                                <path
+                                                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                                </path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-slate-500 font-medium">Location</p>
+                                            <p class="text-slate-700 font-semibold">Mumbai, India</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+                                <h3 class="text-xl font-semibold text-slate-800 mb-4">Social Profiles</h3>
+                                <div class="flex gap-4">
+                                    <a href="https://www.linkedin.com/in/parmarr-karann/" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-all"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-linkedin">
+                                            <path
+                                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                            </path>
+                                            <rect width="4" height="12" x="2" y="9"></rect>
+                                            <circle cx="4" cy="4" r="2"></circle>
+                                        </svg></a><a href="https://github.com/karanparmarr" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="p-3 bg-slate-100 rounded-full hover:bg-blue-100 hover:text-blue-600 transition-all"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                                            <path
+                                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                            </path>
+                                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="opacity: 1; transform: none;">
+                            <form id="contact-form" class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                                <div class="space-y-6">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label for="name"
+                                                class="block text-sm font-medium text-slate-700 mb-2">Name</label>
+                                            <input type="text" id="name" name="name" required=""
+                                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all outline-none"
+                                                placeholder="Your name" value="">
+                                        </div>
+                                        <div>
+                                            <label for="email"
+                                                class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                                            <input type="email" id="email" name="email" required=""
+                                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all outline-none"
+                                                placeholder="Email address" value="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="subject"
+                                            class="block text-sm font-medium text-slate-700 mb-2">Subject</label>
+                                        <input type="text" id="subject" name="subject" required=""
+                                            class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all outline-none"
+                                            placeholder="Project discussion" value="">
+                                    </div>
+                                    <div>
+                                        <label for="message"
+                                            class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                                        <textarea id="message" name="message" required="" rows="5"
+                                            class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all outline-none resize-none"
+                                            placeholder="Tell me about your project or idea..."></textarea>
+                                    </div>
+                                    <button id="send-btn" type="submit"
+                                        class="rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-blue-600 to-red-600 hover:from-blue-700 hover:to-red-700 text-white py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send">
+                                            <path
+                                                d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                                            </path>
+                                            <path d="m21.854 2.147-10.94 10.939"></path>
+                                        </svg>Send Message</button>
+                                </div>
+                            </form>
+                            <div id="success-card"
+                                class="fixed top-8 right-8 bg-white shadow-2xl rounded-xl p-5 border border-green-300 hidden z-50">
+
+                                <div class="flex items-center gap-3">
+
+                                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+
+                                        ✅
+
+                                    </div>
+
+                                    <div>
+
+                                        <h3 class="font-bold text-green-600">
+                                            Message Sent!
+                                        </h3>
+
+                                        <p id="success-text" class="text-slate-600 text-sm">
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center">
+                <div class="flex gap-6 mb-8" style="opacity: 1; transform: none;">
+                    <a href="https://github.com/karanparmarr" target="_blank" rel="noopener noreferrer"
+                        class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors" aria-label="GitHub"
+                        tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-github w-5 h-5">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                            </path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/parmarr-karann/" target="_blank" rel="noopener noreferrer"
+                        class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors" aria-label="LinkedIn"
+                        tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-linkedin w-5 h-5">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:official.karanparmar@gmail.com" target="_blank" rel="noopener noreferrer"
+                        class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors" aria-label="Email"
+                        tabindex="0" style="transform: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-mail w-5 h-5">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg></a>
+                </div>
+                <div class="text-center" style="opacity: 1;">
+                    <p class="text-slate-300 mb-2 flex items-center justify-center gap-2">Made with <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-heart w-4 h-4 text-red-500 fill-red-500">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                            </path>
+                        </svg> by Karan Parmar</p>
+                    <p class="text-slate-400 text-sm">© 2026 All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</body>
+
+</html>
