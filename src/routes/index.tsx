@@ -25,6 +25,13 @@ export const Route = createFileRoute("/")({
 function loadScript(src: string, id: string): Promise<void> {
   return new Promise((resolve, reject) => {
     if (document.getElementById(id)) return resolve();
+    const existing = document.querySelector<HTMLScriptElement>(`script[src="${src}"]`);
+    if (existing) {
+      if ((existing as unknown as { readyState?: string }).readyState === "complete") return resolve();
+      existing.addEventListener("load", () => resolve());
+      existing.addEventListener("error", () => reject(new Error(`Failed to load ${src}`)));
+      return;
+    }
     const s = document.createElement("script");
     s.src = src;
     s.id = id;
