@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Karan Parmar — Software Engineer & Data Analyst" },
+      { name: "description", content: "Portfolio of Karan Parmar — Software Engineer & Data Analyst building REST APIs, full-stack web apps, and data analytics tools." },
+      { name: "author", content: "Karan Parmar" },
+      { property: "og:title", content: "Karan Parmar — Software Engineer & Data Analyst" },
+      { property: "og:description", content: "Building backend systems, REST APIs, and data-driven tools." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
