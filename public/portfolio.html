@@ -1171,6 +1171,19 @@ document.addEventListener('DOMContentLoaded', function () {
   var mobileMenu = document.getElementById("mobile-menu");
   if (menuToggle && mobileMenu) menuToggle.addEventListener("click", function () { mobileMenu.classList.toggle("hidden"); });
 
+  // Navbar becomes white when scrolling
+  var navbar = document.getElementById("navbar");
+  function updateNavbarBg() {
+    if (!navbar) return;
+    if (window.scrollY > 20) {
+      navbar.classList.add("nav-scrolled");
+    } else {
+      navbar.classList.remove("nav-scrolled");
+    }
+  }
+  window.addEventListener("scroll", updateNavbarBg, { passive: true });
+  updateNavbarBg();
+
   var workBtn = document.getElementById("workBtn");
   if (workBtn) workBtn.addEventListener("click", function () { var el=document.getElementById("projects"); if(el) el.scrollIntoView({behavior:"smooth"}); });
   var contactBtn = document.getElementById("contactBtn");
