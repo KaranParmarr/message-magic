@@ -1176,6 +1176,37 @@ document.addEventListener('DOMContentLoaded', function () {
       if (url) window.open(url, '_blank', 'noopener,noreferrer');
     });
   });
+
+  // Scroll reveal: auto-tag section headings, cards, and images
+  var sections = document.querySelectorAll('section');
+  sections.forEach(function (sec) {
+    var h = sec.querySelector('h2');
+    if (h && !h.classList.contains('reveal-up')) h.classList.add('reveal-up');
+    var line = h && h.nextElementSibling;
+    if (line && line.classList.contains('w-20')) line.classList.add('reveal-scale');
+    // Cards / grid items
+    sec.querySelectorAll('.grid > div, .space-y-12 > div, .space-y-8 > div').forEach(function (el, i) {
+      el.classList.add(i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+      el.style.transitionDelay = (Math.min(i, 4) * 80) + 'ms';
+    });
+    // Standalone imgs in about
+    sec.querySelectorAll(':scope > .container img').forEach(function (img) {
+      if (!img.closest('.reveal-left,.reveal-right,.reveal-up,.reveal-scale')) img.classList.add('reveal-scale');
+    });
+  });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale').forEach(function (el) {
+    io.observe(el);
+  });
 });
 </script>
 
