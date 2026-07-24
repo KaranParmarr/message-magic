@@ -81,9 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Portfolio of Karan Parmar — Software Engineer & Data Analyst building REST APIs, full-stack web apps, and data analytics tools." },
       { name: "author", content: "Karan Parmar" },
       { property: "og:title", content: "Karan Parmar — Software Engineer & Data Analyst" },
-      { property: "og:description", content: "Building backend systems, REST APIs, and data-driven tools." },
+      { property: "og:description", content: "Portfolio of Karan Parmar — Software Engineer & Data Analyst building REST APIs, full-stack web apps, and data analytics tools." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Karan Parmar — Software Engineer & Data Analyst" },
+      { name: "twitter:description", content: "Portfolio of Karan Parmar — Software Engineer & Data Analyst building REST APIs, full-stack web apps, and data analytics tools." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/83d8ea2c-c1b2-4f11-9ebe-b8a63264eac6/id-preview-9611cf4a--87a16742-9ad8-44df-a8e6-880a70dbd592.lovable.app-1784888643729.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/83d8ea2c-c1b2-4f11-9ebe-b8a63264eac6/id-preview-9611cf4a--87a16742-9ad8-44df-a8e6-880a70dbd592.lovable.app-1784888643729.png" },
     ],
     links: [
       {

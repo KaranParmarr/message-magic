@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Building backend systems, REST APIs, and data-driven tools. Turning raw data and rough ideas into working software.",
+          "Portfolio of Karan Parmar — Software Engineer & Data Analyst building REST APIs, full-stack web apps, and data analytics tools.",
       },
     ],
   }),
