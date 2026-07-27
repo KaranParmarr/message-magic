@@ -1115,7 +1115,11 @@ document.addEventListener('DOMContentLoaded', function () {
       })
         .then(function (res) {
           if (!res.ok) throw new Error("Request failed");
-          successText.innerHTML = '<strong>' + params.name + '</strong>, your message has been sent successfully! \ud83c\udf89';
+          successText.textContent = "";
+          var nameEl = document.createElement("strong");
+          nameEl.textContent = params.name;
+          successText.appendChild(nameEl);
+          successText.appendChild(document.createTextNode(", your message has been sent successfully! \ud83c\udf89"));
           successCard.classList.remove("hidden");
           contactForm.reset();
           sendBtn.disabled = false;
