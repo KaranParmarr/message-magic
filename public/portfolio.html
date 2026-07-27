@@ -1087,12 +1087,9 @@
         </div>
     </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   if (window.lucide) window.lucide.createIcons();
-  emailjs.init("b9INusQn0Vy3YeXGg");
 
   var contactForm = document.getElementById("contact-form");
   var sendBtn = document.getElementById("send-btn");
@@ -1111,8 +1108,13 @@ document.addEventListener('DOMContentLoaded', function () {
         subject: document.getElementById("subject").value,
         message: document.getElementById("message").value
       };
-      emailjs.send("service_g38h8a9", "template_f2kfds8", params)
-        .then(function () {
+      fetch("/api/public/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(params)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Request failed");
           successText.innerHTML = '<strong>' + params.name + '</strong>, your message has been sent successfully! \ud83c\udf89';
           successCard.classList.remove("hidden");
           contactForm.reset();
@@ -1120,8 +1122,8 @@ document.addEventListener('DOMContentLoaded', function () {
           sendBtn.innerHTML = defaultBtnHtml;
           setTimeout(function () { successCard.classList.add("hidden"); }, 4000);
         })
-        .catch(function (error) {
-          alert("Failed to send message.\n\n" + (error && error.text ? error.text : ''));
+        .catch(function () {
+          alert("Failed to send message. Please try again later.");
           sendBtn.disabled = false;
           sendBtn.innerHTML = defaultBtnHtml;
         });
